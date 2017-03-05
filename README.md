@@ -8,21 +8,21 @@ This code uses the [Google geocoding API.] (https://developers.google.com/maps/d
 
 ## File Descriptions
 
-###download/
+###download/  (raw input data)
 * bike_data1_0223.csv - Crash data that was provided for Mercer county. About 50K rows. 
 * bike_data2_0447.csv - Crash data that was provided for Ocean? county. About 50K rows. 
 
-###data/
+###src/ 
+* mk_all_data.sh - Script that rebuilds all the data/ files below, using the scripts below. 
+* mk_crashes_GPS.R - Creates data/mercer_crashes_GPS.csv; just extracts the crashes with GPS coordinates provided. 
+* mk_crashes_geocache.py - Calls the Google geocoding API for all the unique locations in the datset & stores the JSON response in data/geocache. Must run this before running mk_crashes_geocodes.py  Can be run multiple times if interrupted by network disruption, timeouts, etc. 
+* mk_crashes_geocodes.py - Geocodes crash locations using the data cached by mk_crashes_geocache.py. Creates data/mercer_crashes_geocodes.csv
+* rm_geocache_overquerylimit.sh - Cleans up stray cache files if exceeds Google query limit 
+* mk_crashes_join_geocodes.R - Creates mercer_crashes_join_geocodes.csv  Must run mk_crashes_geocodes first. 
+
+###data/  (output from scripts, ready for plotting or analysis)
 * mercer_crashes_GPS.csv - Subset of original crash data that included GPS coordinates (about 2K rows)
 * mercer_crashes_geocodes.csv - Latitude & longitude for a subset of crash data that could be successfully geocoded usin the Google geocoding API. Includes just the columns "ID", "LatitudeGeocoded" and "LongitudeGeocoded". About 36K rows. 
 * mercer_crashes_join_geocodes.csv - Original dataset, with the "LatitudeGeocoded" and "LongitudeGeocoded" columns added(an inner join of the downloaded Mercer county dataset & the geocodes file above). About 36K rows.
-* geocache/ - cached JSON responses from to the Google geocoding API (eliminates redundant calls). One file per location (about 17K total). File names are base-16 encoded versions of the location string (e.g. "Nassau Street and Washington Road, Princeton, NJ" -> 4E61737361752053747265657420616E642057617368696E67746F6E20526F61642C205072696E6365746F6E2C204E4A.json )
-
-###src/
-* mk_all_data.sh - Script that coordinates rebuilding all the datafiles above 
-* mk_crashes_GPS.R - Creates data/mercer_crashes_GPS.csv
-* mk_crashes_geocache.py - Calls the Google geocoding API for all the unique locations in the datset & stores the JSON response in data/geocache. 
-* mk_crashes_geocodes.py - Creates data/mercer_crashes_geocodes.csv
-* rm_geocache_overquerylimit.sh - Cleans up stray cache files if exceeds Google query limit 
-* mk_crashes_join_geocodes.R - Creates mercer_crashes_join_geocodes.csv
+* geocache/ - cached JSON responses from to the Google geocoding API (eliminates redundant calls). One file per location (about 17K total). File names are base-16 encoded versions of the location string (e.g. for "Nassau Street and Washington Road, Princeton, NJ" the JSON response from Google is saved in:  data/geocache/4E61737361752053747265657420616E642057617368696E67746F6E20526F61642C205072696E6365746F6E2C204E4A.json )
 

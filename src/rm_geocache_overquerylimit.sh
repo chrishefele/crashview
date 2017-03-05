@@ -1,8 +1,8 @@
 
 # This script removes geocache files that contain no useful information.
-# These files were created by mk-mercer-crashes-geocoded.py 
+# These files were created by mk-crashes-geocoded.py 
 # after it hit the Google API query limit (because of an API key issue).
-# After this script is run, rerun mk-mercer-crashes-geocoded.py 
+# After this script is run, rerun mk-crashes-geocoded.py 
 # so the removed files will be properly repopulated.
 
 cd ../data/geocache

@@ -2,9 +2,9 @@
 # CrashView
 
 ## Introduction
-Crashview is a project run by Code For Princeton that focuses on visualizing bicycle crash data in the Princeton area.  The code in this repository focuses on preparing the dataset -- specifically, geocoding the location information when GPS location data is not available. Because GPS-coded crash data is scarce (less than 5% of all crashes), geocoding significatnly increases the amount of data available; approximately 70% of all crash data was successfully geocoded.
-
-This code uses the [Google geocoding API.] (https://developers.google.com/maps/documentation/geocoding/start)
+Crashview is a project run by Code For Princeton that focuses on visualizing bicycle crash data from the Princeton area.  The code in this repository focuses on geocoding crash locations when GPS location data is not available. GPS-coded crash data is scarce  -- less than 5% of the dataset we obtained contains latitude and longitude.  By using geocoding (specifically the 
+[Google geocoding API.] (https://developers.google.com/maps/documentation/geocoding/start)
+we can obtain latitudes and longitudes for crashes using just an address or intersection description. Using this approach, approximately 70% of the provided crash data was geocoded, significantly increasing the data we could plot & analyze with GIS tools. 
 
 ## File Descriptions
 

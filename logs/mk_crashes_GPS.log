@@ -1,0 +1,108 @@
+Reading:  ../download/bike_data1_0223.csv 
+       ID        DOT_WEB_ID CASE_NUMBER CRASH_YEAR COUNTY          MUNICIPALITY
+1 3439045 20101101010-17819   010-17819       2010 MERCER East Windsor Township
+2 3439046        2010110102          02       2010 MERCER East Windsor Township
+3 3439047  2010110110-01021    10-01021       2010 MERCER East Windsor Township
+4 3439048  2010110110-10007    10-10007       2010 MERCER East Windsor Township
+5 3439049  2010110110-10022    10-10022       2010 MERCER East Windsor Township
+6 3439050   2010110110-1006     10-1006       2010 MERCER East Windsor Township
+  CRASH_DATE CRASH_DAY_OF_WEEK CRASH_MONTH CRASH_TIME POLICE_DEPT_CODE
+1 2010-12-26            Sunday    December   22:51:00                1
+2 2010-06-25            Friday        June   16:19:00                1
+3 2010-02-23           Tuesday    February   07:58:00                1
+4 2010-07-21         Wednesday        July   12:16:00                1
+5 2010-07-21         Wednesday        July   17:55:00                1
+6 2010-01-24            Sunday     January   11:05:00                1
+    POLICE_DEPARTMENT  POLICE_STATION TOTAL_KILLED TOTAL_INCAPACITATED
+1 EAST WINDSOR TWP PD TRAFFIC SAFETY?            0                   0
+2 EAST WINDSOR TWP PD UNIFORM SERVICE            0                   0
+3     CRANBURY TWP PD                            0                   0
+4 EAST WINDSOR TWP PD  UNIFORM SERVIC            0                   0
+5 EAST WINDSOR TWP PD TRAFFIC SAFETY?            0                   0
+6 EAST WINDSOR TWP PD UNIFORM SERVIC?            0                   0
+  TOTAL_INJURED PEDESTRIANS_KILLED PEDESTRIANS_INJURED        SEVERITY
+1             0                  0                   0 Property Damage
+2             0                  0                   0 Property Damage
+3             0                  0                   0 Property Damage
+4             0                  0                   0 Property Damage
+5             0                  0                   0 Property Damage
+6             0                  0                   0 Property Damage
+         INTERSECTION ALCOHOL_INVOLVED HAZMAT_INVOLVED
+1 Not At Intersection               No              No
+2 Not At Intersection               No              No
+3 Not At Intersection               No              No
+4     At Intersection               No              No
+5 Not At Intersection               No              No
+6 Not At Intersection               No              No
+                 CRASH_TYPE TOTAL_VEHICLES_INVOLVED
+1     Struck Parked Vehicle                       2
+2 Same Direction - Rear End                       2
+3 Same Direction - Rear End                       2
+4               Right Angle                       2
+5     Struck Parked Vehicle                       2
+6                   Backing                       2
+                 CRASH_LOCATION LOCATION_DIRECTION ROUTE ROUTE_SUFFIX      SRI
+1           384 MONMOUTH STREET               West    NA                      
+2                 DUTCH NECK RD               NULL    NA              11011144
+3                        US 130              North   130              00000130
+4                        US 130              South   130              00000130
+5 839 ROUTE 130 NORTH (WALMART)               NULL    NA                      
+6                 440 ROUTE 130               NULL    NA                      
+  MILEPOST      ROAD_SYSTEM     ROAD_CHARACTER ROAD_SURFACE_TYPE
+1       NA Private Property Straight and Level          Blacktop
+2     0.00        Municipal Straight and Level          Blacktop
+3    69.92    State Highway Straight and Level          Blacktop
+4    68.97    State Highway Straight and Level          Blacktop
+5       NA Private Property Straight and Level          Blacktop
+6       NA Private Property Straight and Level          Blacktop
+  SURFACE_CONDITION                     LIGHT_CONDITION ENVIRONMENTAL_CONDITION
+1             Snowy Dark (Street Lights On/ continuous)                    Snow
+2               Dry                            Daylight                   Clear
+3               Wet                            Daylight                    Rain
+4               Dry                            Daylight                   Clear
+5               Dry                            Daylight                   Clear
+6               Wet                            Daylight                   Clear
+  ROAD_DIVIDED_BY TEMP_TRAFFIC_CONTROL_ZONE DISTANCE_TO_CROSS_STREET
+1            None                      None                       NA
+2            None                      None                      250
+3   Curbed Median                      None                     5280
+4    Grass Median                      None                       NA
+5            None                      None                       NA
+6            None                      None                       NA
+  UNIT_OF_MEASUREMENT DIRECTION_FROM_CROSS_STREET       CROSS_STREET_NAME
+1                NULL                        NULL                        
+2                Foot                        West                  US 130
+3                Foot                       South CR 685 / OLD TRENTON RD
+4                  At                        NULL          TOWN CENTER RD
+5                NULL                        NULL                        
+6                NULL                        NULL                        
+  IS_RAMP RAMP_TO_FROM_ROUTE_NAME RAMP_TO_FROM_ROUTE_DIRECTION POSTED_SPEED
+1    NULL                                                 NULL           NA
+2    NULL                                                 NULL           35
+3    NULL                                                 NULL           55
+4    NULL                                                 NULL           50
+5    NULL                                                 NULL           NA
+6    NULL                                                 NULL           NA
+  POSTED_SPEED_CROSS_STREET LATITUDE LONGITUDE CELL_PHONE_IN_USE
+1                        NA  0.00000   0.00000                No
+2                        45  0.00000   0.00000                No
+3                        45 40.28799  74.52401                No
+4                        35 40.27676  74.53447                No
+5                        NA  0.00000   0.00000                No
+6                        NA  0.00000   0.00000                No
+  OTHER_PROPERTY_DAMAGE REPORTING_BADGE_NO        X        Y CRASH_NARRATIVE
+1                  NONE                 78       NA       NA              NA
+2                                      576 480354.3 522811.0              NA
+3                                       20 485424.9 529820.3              NA
+4                                       62 482505.9 525730.0              NA
+5                  NONE                563       NA       NA              NA
+6                  NONE                 83       NA       NA              NA
+    MPO TOTAL_PEDESTRIANS_INVOLVED EPDO      DLN
+1 DVRPC                          0  PDO 10292301
+2 DVRPC                          0  PDO 10137716
+3 DVRPC                          0  PDO 10036741
+4 DVRPC                          0  PDO 10168553
+5 DVRPC                          0  PDO 10155815
+6 DVRPC                          0  PDO 10016564
+[1] FALSE FALSE  TRUE  TRUE FALSE FALSE
+Writing:  ../data/mercer_crashes_GPS.csv 

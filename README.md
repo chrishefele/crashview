@@ -17,6 +17,7 @@ This code uses the [Google geocoding API.] (https://developers.google.com/maps/d
 * mercer_crashes_geocodes.csv - Latitude & longitude for a subset of crash data that could be successfully geocoded usin the Google geocoding API. Includes just the columns "ID", "LatitudeGeocoded" and "LongitudeGeocoded". About 36K rows. 
 * mercer_crashes_join_geocodes.csv - Original dataset, with the "LatitudeGeocoded" and "LongitudeGeocoded" columns added(an inner join of the above 2 files). About 36K rows.
 * geocache/ - cached JSON responses from to the Google geocoding API (eliminates redundant calls). One file per location (about 17K total). File names are base-16 encoded versions of the location string (e.g. "Nassau Street and Washington Road, Princeton, NJ")
+
 ###src/
 * mk_all_data.sh - Script that coordinates rebuilding all the datafiles above 
 * mk_crashes_GPS.R - Creates data/mercer_crashes_GPS.csv

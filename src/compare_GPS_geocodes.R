@@ -1,14 +1,12 @@
 
-# Script to perform a crossmatch test to determine if the 
+# This analysis script performs a crossmatch test to determine if the 
 # geographic distributions of the crashes WITH latitude & longitude 
-# information provided differs from the geographic distribution 
-# of the other crashes WITHOUT latitude & longitude recorded 
+# information provided in the crash report differs from the 
+# geographic distribution of the crashes that did not.
+# (Crashes without any latitude & longitudes in the crash report were geocoded 
+# using the address and/or intersection description in the crash report)
 #
-# The crashes without that information need to be geocoded to 
-# determine their latitude/longitude. But is there some bias that  
-# determines which crashes have GPS coordinates recorded, and which do not?
-#
-# Results indicate that yes, the distributions seem different. 
+# Results indicate that the distributions seem different. 
 # Interpretation/investigation  of this is TBD. 
 #
 
@@ -16,8 +14,8 @@ library(geosphere)
 library(crossmatch)
 
 # sample to same memory / computation time 
-NSAMPLES_GEO <- 3000
-NSAMPLES_GPS <- 2800
+NSAMPLES_GEO <- 2000
+NSAMPLES_GPS <- 2000
 
 GEOCODES_FILE   <- "../data/mercer_crashes_geocodes.csv"
 GPS_FILE        <- "../data/mercer_crashes_GPS.csv"

@@ -12,17 +12,20 @@ The original, raw datasets are in the /download directory.  "bike_data1_0223.csv
 
 The output of the geocoding scripts in /src  are put in the /data directory.  
 
-All the datasets can be rebuilt using the mk_all_data.sh script, which coordinates all the other scripts.  For geocoding, there are two steps: first, all the unique addresses/locations are extracted, and then the Google geocoding API is called for each one of them & the result is cached in /data/geocache.  Second, the cache is used to geocode all the rows in the original/raw dataset.  
+All the datasets can be rebuilt using the mk_all_data.sh script, which coordinates all the other scripts.  
 
-Caching the API calls eliminates redundant calls, and allows the API queries to be stopped and resumed at any point.  Creating the cache is time consuming; each call takes about 1 second, when running single-threaded. So rebuilding the cache from scratch takes about 3 hours. I've included a gziped version of the cache in /data/geocache, if you'd like to pre-seed it. 
+For geocoding, all calls to the Google geocoding API are cached in /data/geocache.This eliminate redundant calls, or repeated calls when other scripts using the API data are re-run.  
+Creating the cache is time consuming. Each API takes about 1 second (single threaded), and geocoding the original dataset takes about 3 hours. I've included a gziped version of the cache in /data/geocache, if you'd like to pre-seed the cache.  
+
+Runtime of all the other scripts is < 1 minute.  
 
 ## Instructions for Use
 
 All the datasets are already built in this repository and ready to use (in /data). But if you want to rebuild them from scratch, you would:
 * Clone the respository
-* gunzip /data/geocache/mercer-geocache-files.tgz (if you want to rebuild the cache)
+* gunzip /data/geocache/mercer-geocache-files.tgz (only if you do NOT want to pre-seed the cache)
 * cd /src
 * ./src/mk_all_data.sh
 
-Note: Right now the input filename is hard coded, so that would need to be changed as well if you provided new data.
+Note: Right now the input filename is hard coded, so that would need to be changed as well if you provided new data. 
 

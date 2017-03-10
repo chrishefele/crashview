@@ -12,10 +12,9 @@ The original, raw datasets are in the /download directory.  "bike_data1_0223.csv
 
 The output of the geocoding scripts in /src  are put in the /data directory.  
 
-All the datasets can be rebuilt using the mk_all_data.sh script, which coordinates all the other scripts.  
+All the datasets can be rebuilt using the /src/mk_all_data.sh script, which coordinates all the other scripts.  
 
-For geocoding, all calls to the Google geocoding API are cached in /data/geocache.This eliminate redundant calls, or repeated calls when other scripts using the API data are re-run.  
-Creating the cache is time consuming. Each API takes about 1 second (single threaded), and geocoding the original dataset takes about 3 hours. I've included a gziped version of the cache in /data/geocache, if you'd like to pre-seed the cache.  
+For geocoding, all the results from the Google geocoding API calls are cached in files in /data/geocache.This eliminate redundant calls, or repeated calls when other scripts using the API data are re-run.  Creating the cache is time consuming, though. Each API takes about 1 second (single threaded), so geocoding the original dataset took about 3 hours. I've included a gziped version of the cache in /data/geocache, if you'd like to pre-seed the cache.  
 
 Runtime of all the other scripts is < 1 minute.  
 
@@ -23,7 +22,7 @@ Runtime of all the other scripts is < 1 minute.
 
 All the datasets are already built in this repository and ready to use (in /data). But if you want to rebuild them from scratch, you would:
 * Clone the respository
-* gunzip /data/geocache/mercer-geocache-files.tgz (only if you do NOT want to pre-seed the cache)
+* gunzip /data/geocache/mercer-geocache-files.tgz (but only if you do NOT want to pre-seed the cache)
 * cd /src
 * ./src/mk_all_data.sh
 

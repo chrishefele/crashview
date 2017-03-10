@@ -22,9 +22,9 @@ Runtime of all the other scripts is < 1 minute.
 
 All the datasets are already built in this repository and ready to use (in /data). But if you want to rebuild them from scratch, you would:
 * Clone the respository
-* gunzip /data/geocache/mercer-geocache-files.tgz (but only if you do NOT want to pre-seed the cache)
+* gunzip /data/geocache/mercer-geocache-files.tgz (but only if you want to pre-seed the cache)
 * cd /src
 * ./src/mk_all_data.sh
 
-Note: Right now the input filename is hard coded, so that would need to be changed as well if you provided new data. 
+Note: Right now the input filename is hard coded in the scripts, so that would need to be changed if you provided new data. 
 

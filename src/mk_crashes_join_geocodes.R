@@ -5,7 +5,7 @@
 # The resulting .csv file can be uploaded to carto.com 
 # for plotting on a map.
 
-LEFT_FILE  <- "../download/bike_data1_0223.csv" 
+LEFT_FILE  <- "../download/bike_crashes.csv" 
 RIGHT_FILE <- "../data/mercer_crashes_geocodes.csv"
 JOIN_FILE  <- "../data/mercer_crashes_join_geocodes.csv"
 

@@ -1,4 +1,4 @@
-Reading:  ../download/bike_data1_0223.csv 
+Reading:  ../download/bike_crashes.csv 
 Reading:  ../data/mercer_crashes_geocodes.csv 
 Writing:  ../data/mercer_crashes_join_geocodes.csv 
 Done. Wrote:  ../data/mercer_crashes_join_geocodes.csv 

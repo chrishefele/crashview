@@ -29,7 +29,7 @@ import json
 from   collections import OrderedDict
 
 
-CRASH_FILE   = "../download/bike_data1_0223.csv"
+CRASH_FILE   = "../download/bike_crashes.csv"
 GEOCACHE_DIR = "../data/geocache/"
 VERBOSE      = False
 

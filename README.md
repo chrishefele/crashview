@@ -8,9 +8,9 @@ This significantly increased the amount of data we could use for plotting and an
 
 ## System Descriptions & Operation
 
-The original, raw datasets are in the /download directory.  "bike_data1_0223.csv" is for Mercer county and has about 50K rows.
+The original, raw datasets are in the /download directory.  bike_crashes.csv is a symbolic link to an appropriate input dataset. 
 
-The output of the geocoding scripts in /src  are put in the /data directory.  
+The output of the geocoding scripts put in the /data directory.  
 
 All the datasets can be rebuilt using the /src/mk_all_data.sh script, which coordinates all the other scripts.  
 
@@ -26,5 +26,5 @@ All the datasets are already built in this repository and ready to use (in /data
 * cd /src
 * ./src/mk_all_data.sh
 
-Note: Right now the input filename is hard coded in the scripts, so that would need to be changed if you provided new data. 
+Note: Right now the input filename is hard coded in the scripts as bike_crashes.csv, and a symbolic link in /data points to the file of interest.  iSo that would need to be changed if you provided new data. 
 

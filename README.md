@@ -14,7 +14,7 @@ The output of the geocoding scripts put in the /data directory.
 
 All the datasets can be rebuilt using the /src/mk_all_data.sh script, which coordinates all the other scripts.  
 
-For geocoding, all the results from the Google geocoding API calls are cached in files in /data/geocache.This eliminate redundant calls, or repeated calls when other scripts using the API data are re-run.  Creating the cache is time consuming, though. Each API takes about 1 second (single threaded), so geocoding the original dataset took about 3 hours. I've included a gziped version of the cache in /data/geocache, if you'd like to pre-seed the cache.  
+For geocoding, all the results from the Google geocoding API calls are cached in files in /data/geocache.This eliminate redundant calls, or repeated calls when other scripts using the API data are re-run.  Creating the cache is time consuming, though. Each API call takes about 1 second (single threaded). I've included a gziped version of the cache in /data/geocache, if you'd like to pre-seed the cache with previous results for Mercer County, NJ.  
 
 Runtime of all the other scripts is < 1 minute.  
 

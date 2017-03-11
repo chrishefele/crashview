@@ -26,5 +26,5 @@ All the datasets are already built in this repository and ready to use (in /data
 * cd /src
 * ./src/mk_all_data.sh
 
-Note: Right now the input filename is hard coded in the scripts as bike_crashes.csv, and a symbolic link in /data points to the file of interest.  iSo that would need to be changed if you provided new data. 
+Note: Right now the input filename is hard coded in the scripts as bike_crashes.csv, which is a symbolic link in /download which now points to the file of interest.  So that link would need to be changed if you provided new data. 
 

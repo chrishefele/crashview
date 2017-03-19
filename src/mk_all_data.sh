@@ -7,9 +7,9 @@ Rscript mk_crashes_GPS.R | tee ../logs/mk_crashes_GPS.log
 # ...or...use a script to set your API key, e.g. 
 source set_google_API_key.sh
 
-python mk_crashes_geocache.py | tee ../logs/mk_crashes_geocache.log
+stdbuf -o0 python mk_crashes_geocache.py | tee ../logs/mk_crashes_geocache.log
 
-python mk_crashes_geocodes.py | tee ../logs/mk_crashes_geocodes.log 
+stdbuf -o0 python mk_crashes_geocodes.py | tee ../logs/mk_crashes_geocodes.log 
 
-Rscript mk_crashes_join_geocodes.R | tee ../logs/mk_crashes_join_geocodes.log
+stdbuf -o0 Rscript mk_crashes_join_geocodes.R | tee ../logs/mk_crashes_join_geocodes.log
 

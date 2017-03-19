@@ -8,13 +8,13 @@ This significantly increased the amount of data we could use for plotting and an
 
 ## System Descriptions & Operation
 
-The original, raw datasets are in the /download directory.  bike_crashes.csv is a symbolic link to an appropriate input dataset. 
+The original, raw datasets are in the /download directory.  input_crashes.csv is a symbolic link to an appropriate input dataset. 
 
-The output of the geocoding scripts put in the /data directory.  
+The output files of the geocoding scripts are all put in the /data directory.  
 
 All the datasets can be rebuilt using the /src/mk_all_data.sh script, which coordinates all the other scripts.  
 
-For geocoding, all the results from the Google geocoding API calls are cached in files in /data/geocache.This eliminate redundant calls, or repeated calls when other scripts using the API data are re-run.  Creating the cache is time consuming, though. Each API call takes about 1 second (single threaded). I've included a gziped version of the cache in /data/geocache, if you'd like to pre-seed the cache with previous results for Mercer County, NJ.  
+For geocoding, all the results from the Google geocoding API calls are cached in files in /data/geocache.This eliminate redundant calls, or repeated calls when other scripts using the API data are re-run.  Creating the cache is time consuming, though. Each API call takes about 1 second (single threaded). I've included a gziped version of the cache in /data/geocache, if you'd like to pre-seed the cache with previous results for bike crashes in Mercer County, NJ.  
 
 Runtime of all the other scripts is < 1 minute.  
 
@@ -26,5 +26,5 @@ All the datasets are already built in this repository and ready to use (in /data
 * cd /src
 * ./src/mk_all_data.sh
 
-Note: Right now the input filename is hard coded in the scripts as bike_crashes.csv, which is a symbolic link in /download which now points to the file of interest.  So that link would need to be changed if you provided new data. 
+Note: Right now the input filename is hard coded in the scripts as input_crashes.csv, which is a symbolic link in /download which now points to the file of interest.  So that link would need to be changed if you provided new data. 
 

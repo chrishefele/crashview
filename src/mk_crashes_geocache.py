@@ -31,7 +31,7 @@ from   collections import OrderedDict
 
 CRASH_FILE   = "../download/input_crashes.csv"
 GEOCACHE_DIR = "../data/geocache/"
-VERBOSE      = False
+VERBOSE      = True
 
 
 def crashes_iter():

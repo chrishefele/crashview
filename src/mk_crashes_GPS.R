@@ -3,8 +3,8 @@
 # coordinates recorded & writes only them to a .csv file.
 # That file is uploaded to carto.com for plotting on a map.
 
-INFILE   <- "../download/bike_crashes.csv" 
-OUTFILE  <- "../data/mercer_crashes_GPS.csv"
+INFILE   <- "../download/input_crashes.csv" 
+OUTFILE  <- "../data/crashes_GPS.csv"
 
 cat("Reading: ", INFILE, "\n")
 bike.data <- read.csv(INFILE)

@@ -5,9 +5,9 @@
 # The resulting .csv file can be uploaded to carto.com 
 # for plotting on a map.
 
-LEFT_FILE  <- "../download/bike_crashes.csv" 
-RIGHT_FILE <- "../data/mercer_crashes_geocodes.csv"
-JOIN_FILE  <- "../data/mercer_crashes_join_geocodes.csv"
+LEFT_FILE  <- "../download/input_crashes.csv" 
+RIGHT_FILE <- "../data/crashes_geocodes.csv"
+JOIN_FILE  <- "../data/crashes_join_geocodes.csv"
 
 cat("Reading: ", LEFT_FILE, "\n")
 df.left  <- read.csv(LEFT_FILE)

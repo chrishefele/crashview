@@ -15,7 +15,7 @@ import csv
 from   mk_crashes_geocache import crashes_iter, crash_geoquery, \
                                   geoquery_cachefile, is_accurate
 
-CRASHES_GEOCODED_CSV = '../data/mercer_crashes_geocodes.csv'
+CRASHES_GEOCODED_CSV = '../data/crashes_geocodes.csv'
 DEBUG = True
 
 

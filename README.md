@@ -10,7 +10,7 @@ This significantly increased the amount of data we could use for plotting and an
 
 The original, raw datasets are in the /download directory.  input_crashes.csv is a symbolic link to an appropriate input dataset. 
 
-The output files of the geocoding scripts are all put in the /data directory.  
+The output files of the geocoding scripts are all put in the /data directory. Older results are in subdirectories (e.g. for bike_crashes, or car_crashes) 
 
 All the datasets can be rebuilt using the /src/mk_all_data.sh script, which coordinates all the other scripts.  
 

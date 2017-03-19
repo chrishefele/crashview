@@ -5,9 +5,7 @@
 # After this script is run, rerun mk-crashes-geocoded.py 
 # so the removed files will be properly repopulated.
 
-cd ../data/geocache
-
-grep OVER_QUERY_LIMIT *.json | awk '{print $1}' | sed 's/://g' > over-query-limit-files
+grep -r OVER_QUERY_LIMIT ../data/geocache | awk '{print $1}' | sed 's/://g' > over-query-limit-files
 
 for f in `cat over-query-limit-files`
 do

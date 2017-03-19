@@ -1,4 +1,4 @@
-Reading:  ../download/bike_crashes.csv 
-Reading:  ../data/mercer_crashes_geocodes.csv 
-Writing:  ../data/mercer_crashes_join_geocodes.csv 
-Done. Wrote:  ../data/mercer_crashes_join_geocodes.csv 
+Reading:  ../download/input_crashes.csv 
+Reading:  ../data/crashes_geocodes.csv 
+Writing:  ../data/crashes_join_geocodes.csv 
+Done. Wrote:  ../data/crashes_join_geocodes.csv 

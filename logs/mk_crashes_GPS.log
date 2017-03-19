@@ -1,108 +1,45 @@
-Reading:  ../download/bike_crashes.csv 
-       ID           DOT_WEB_ID  CASE_NUMBER CRASH_YEAR COUNTY
-1 4936283 20051102OIT-05325536 OIT-05325536       2005 MERCER
-2 6812215      2006110106-9758       Jun-58       2006 MERCER
-3 6820026  2.006111101206E+018   1206006571       2006 MERCER
-4 7119287     2007111007-15099     07-15099       2007 MERCER
-5 3439438      2010110110-2024       Oct-24       2010 MERCER
-6 4032183  2012110712-18163-AC  12-18163-AC       2012 MERCER
-              MUNICIPALITY      CRASH_DATE CRASH_DAY_OF_WEEK CRASH_MONTH
-1           Ewing Township   7/4/2005 0:00            Monday        July
-2    East Windsor Township  7/25/2006 0:00           Tuesday        July
-3             Trenton City  1/12/2006 0:00          Thursday     January
-4       Princeton Township 10/10/2007 0:00         Wednesday     October
-5    East Windsor Township  2/16/2010 0:00           Tuesday    February
-6 Lawrence Twp (Mercer Co)   5/7/2012 0:00            Monday         May
-        CRASH_TIME POLICE_DEPT_CODE     POLICE_DEPARTMENT  POLICE_STATION
-1  12/31/1899 1:04                1                 EWING             T-1
-2 12/31/1899 21:24                1 EAST WINDSOR TOWNSHIP UNIFORM SERVIC?
-3 12/31/1899 12:09                1               TRENTON             CIB
-4 12/31/1899 12:07                1    PRINCETON TOWNSHIP                
-5 12/31/1899 12:36                1   EAST WINDSOR TWP PD UNIFORM SERVICE
-6  12/31/1899 9:38                1       LAWRENCE TWP PD                
-  TOTAL_KILLED TOTAL_INCAPACITATED TOTAL_INJURED PEDESTRIANS_KILLED
-1            1                   0             0                  0
-2            1                   0             1                  0
-3            1                   0             0                  0
-4            1                   0             0                  0
-5            1                   0             1                  0
-6            1                   0             0                  0
-  PEDESTRIANS_INJURED SEVERITY        INTERSECTION ALCOHOL_INVOLVED
-1                   0    Fatal     At Intersection               No
-2                   0    Fatal Not At Intersection               No
-3                   0    Fatal     At Intersection               No
-4                   0    Fatal     At Intersection               No
-5                   0    Fatal     At Intersection              Yes
-6                   0    Fatal Not At Intersection               No
-  HAZMAT_INVOLVED   CRASH_TYPE TOTAL_VEHICLES_INVOLVED    CRASH_LOCATION
-1              No Pedalcyclist                       1     HOMECREST AVE
-2              No Pedalcyclist                       1            US 130
-3              No Pedalcyclist                       1 MERCER COUNTY 622
-4              No Pedalcyclist                       1       HARRISON ST
-5              No Pedalcyclist                       1     DUTCH NECK RD
-6              No Pedalcyclist                       1              US 1
-  LOCATION_DIRECTION ROUTE ROUTE_SUFFIX      SRI MILEPOST   ROAD_SYSTEM
-1               NULL    NA              11021271     0.08     Municipal
-2              North   130                   130    68.52 State Highway
-3              South   622              11000622       NA        County
-4               NULL    NA              11091239     1.23     Municipal
-5               West    NA                             NA     Municipal
-6               NULL     1                     1     7.01 State Highway
-      ROAD_CHARACTER ROAD_SURFACE_TYPE SURFACE_CONDITION
-1 Straight and Level          Blacktop               Dry
-2 Straight and Level          Blacktop               Dry
-3 Straight and Level          Blacktop               Dry
-4 Straight and Level          Blacktop               Dry
-5    Curve and Level          Blacktop               Wet
-6 Straight and Level          Blacktop               Dry
-                      LIGHT_CONDITION ENVIRONMENTAL_CONDITION ROAD_DIVIDED_BY
-1 Dark (Street Lights On/ continuous)                   Clear            None
-2 Dark (Street Lights On/ continuous)                   Clear    Grass Median
-3                            Daylight                   Clear            None
-4                            Daylight                   Clear   Curbed Median
-5                            Daylight                    Snow            None
-6                            Daylight                Overcast  Barrier Median
-  TEMP_TRAFFIC_CONTROL_ZONE DISTANCE_TO_CROSS_STREET UNIT_OF_MEASUREMENT
-1                      None                       NA                  At
-2                      None                      250                Foot
-3                      None                       NA                  At
-4                      None                       NA                  At
-5                      None                       NA                  At
-6                      None                     1400                Foot
-  DIRECTION_FROM_CROSS_STREET CROSS_STREET_NAME IS_RAMP RAMP_TO_FROM_ROUTE_NAME
-1                        NULL    DOUGLAS AVENUE    NULL                        
-2                       South            CR 571    NULL                        
-3                        NULL  CUNNINGHAM ALLEY    NULL                        
-4                        NULL      TERHUNE ROAD    NULL                        
-5                        NULL      WILMOR DRIVE    NULL                        
-6                       South GROVERS MILL ROAD    NULL                        
-  RAMP_TO_FROM_ROUTE_DIRECTION POSTED_SPEED POSTED_SPEED_CROSS_STREET LATITUDE
-1                         NULL           25                        NA 40.24071
-2                         NULL           45                        25 40.27146
-3                         NULL           25                        NA  0.00000
-4                         NULL           30                        25  0.00000
-5                         NULL           30                        25  0.00000
-6                         NULL           55                        40  0.00000
-  LONGITUDE CELL_PHONE_IN_USE OTHER_PROPERTY_DAMAGE REPORTING_BADGE_NO        X
-1  74.77002                No                  NONE                705 416746.9
-2  74.53944                No                  NONE                 64 481118.7
-3   0.00000                No                                      421       NA
-4   0.00000                No                                      103 449111.1
-5   0.00000                No                  NONE                551       NA
-6   0.00000                No                                      176 438466.2
-         Y CRASH_NARRATIVE   MPO TOTAL_PEDESTRIANS_INVOLVED         EPDO
-1 512710.8              NA DVRPC                          0 Fatal Injury
-2 523800.0              NA DVRPC                          0 Fatal Injury
-3       NA              NA DVRPC                          0 Fatal Injury
-4 558273.0              NA DVRPC                          0 Fatal Injury
-5       NA              NA DVRPC                          0 Fatal Injury
-6 529329.5              NA DVRPC                          0 Fatal Injury
-       DLN
-1  5325536
-2  6254933
-3  6134801
-4  7259119
-5 10067238
-6 12089951
-[1]  TRUE  TRUE FALSE FALSE FALSE FALSE
-Writing:  ../data/mercer_crashes_GPS.csv 
+Reading:  ../download/input_crashes.csv 
+  Crash.Date Crash.Day.Of.Week Crash.Time Driver.DOB Driver.Sex County.Name
+1 12/23/2001                 S      14:28                            MERCER
+2 12/23/2001                 S      14:28                            MERCER
+3 01/04/2001                TH      07:51 12/05/1949          M      MERCER
+4 01/04/2001                TH      07:51 04/21/1951          M      MERCER
+5 01/08/2001                 M      16:29 07/01/1925          M      MERCER
+6 01/08/2001                 M      16:29                            MERCER
+  Municipality.Name Total.Killed Total.Injured Total.Vehicles.Involve
+1    PRINCETON BORO            0             0                      2
+2    PRINCETON BORO            0             0                      2
+3    PRINCETON BORO            0             1                      2
+4    PRINCETON BORO            0             1                      2
+5    PRINCETON BORO            0             0                      2
+6    PRINCETON BORO            0             0                      2
+  Alcohol.Involved Alcohol.Test.Given Alcohol.Test.Results
+1                N                                      NA
+2                N                                      NA
+3                N                  N                   NA
+4                N                  N                   NA
+5                N                  N                   NA
+6                N                                      NA
+  Cell.Phone.In.Use.Flag      Crash.Location Cross.Street.Name Latitude
+1                      N              RT 206                         NA
+2                      N              RT 206                         NA
+3                      N              CR 604     ROSEDALE ROAD       NA
+4                      N              CR 604     ROSEDALE ROAD       NA
+5                      N SOUTH TULANE STREET     LINCOLN COURT       NA
+6                      N SOUTH TULANE STREET     LINCOLN COURT       NA
+  Longitude Year Driver.Age Crash.Hour Crash.Weekday Crash.Weekend
+1        NA 2001         NA         14         FALSE         FALSE
+2        NA 2001         NA         14         FALSE         FALSE
+3        NA 2001         51          7          TRUE         FALSE
+4        NA 2001         49          7          TRUE         FALSE
+5        NA 2001         75         16         FALSE         FALSE
+6        NA 2001         NA         16         FALSE         FALSE
+    MUNICIPALITY      CRASH_LOCATION CROSS_STREET_NAME LATITUDE LONGITUDE ID
+1 PRINCETON BORO              RT 206                         NA        NA  1
+2 PRINCETON BORO              RT 206                         NA        NA  2
+3 PRINCETON BORO              CR 604     ROSEDALE ROAD       NA        NA  3
+4 PRINCETON BORO              CR 604     ROSEDALE ROAD       NA        NA  4
+5 PRINCETON BORO SOUTH TULANE STREET     LINCOLN COURT       NA        NA  5
+6 PRINCETON BORO SOUTH TULANE STREET     LINCOLN COURT       NA        NA  6
+[1] FALSE FALSE FALSE FALSE FALSE FALSE
+Writing:  ../data/crashes_GPS.csv 
